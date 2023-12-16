@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-gestion-produits';
-}
+  actions:Array<any>=
+  [
+    {titre:"Acceuil",icon:"bi bi-house", route:"/accueil"},
+    {titre:"Liste Produits",icon:"bi bi-bag-fill", route:"/produits"},
+    {titre:"Ajouter",icon:"bi bi-bag-fill", route:"/ajouterProduit"},
+    
+  ]
+  actionCourante:any;
+  setActionCourante(a:any){
+    this.actionCourante=a;
+  }}
